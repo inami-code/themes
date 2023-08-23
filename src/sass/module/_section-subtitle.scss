@@ -1,0 +1,14 @@
+@use 'global' as *;
+
+
+.section-subtitle{
+font-size: rem(11);
+letter-spacing: 0.1em;
+font-weight: $bold;
+line-height: 1;
+color: $main-color;
+text-transform: uppercase;
+@include mq('md') {
+  font-size: rem(14);
+}
+}

@@ -1,0 +1,11 @@
+@use 'global' as *;
+
+.archive-cards__item:not(:first-child){
+  margin-top: rem(17);
+}
+
+.archive-cards__item.archive-card--pc:not(:first-child){
+  @include mq('md') {
+    margin-top: rem(20);
+  }
+}

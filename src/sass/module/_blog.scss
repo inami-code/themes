@@ -1,0 +1,25 @@
+@use "global" as *;
+
+
+.blog__title {
+  text-align: center;
+}
+
+.blog__items {
+  margin-top: rem(40);
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(300px,1fr) ) ;
+    gap: rem(55) rem(50);
+    margin-top: rem(80);
+  }
+}
+
+
+.blog__btn {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(73);
+  }
+}

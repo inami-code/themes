@@ -1,0 +1,105 @@
+@use 'global' as *;
+
+
+.medical-content {
+  position: relative;
+  background-color: $light-blue;
+  padding-bottom: rem(62);
+  @include mq("md") {
+    padding-bottom: rem(82);
+  }
+}
+
+.medical-content::before {
+  content: "";
+  position: absolute;
+  top: rem(-215);
+  left: 0;
+  width: 100%;
+  height: rem(220);
+  background-image: url("../images/common/medical-bg-sp_1.png");
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  @include mq('md') {
+      background-image: url("../images/common/medical-bg_1.png");
+  }
+}
+.medical-content::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-97);
+  left: 0;
+  width: 100%;
+  height: rem(97);
+  background-image: url("../images/common/medical-bg_2.png");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.medical-content__inner {
+  position: relative;
+}
+
+.medical-content__inner::before {
+  content: "";
+  position: absolute;
+  bottom: rem(-48);
+  left: calc(50% - min(50vw, 178px));
+  width: rem(26);
+  height: rem(29);
+  background-image: url("../images/common/medical-bg-star_2.png");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  @include mq("md") {
+    width: rem(57);
+    height: rem(57);
+    bottom: rem(-72);
+    left: calc(50% - min(50vw, 600px));
+  }
+}
+.medical-content__inner::after {
+  content: "";
+  position: absolute;
+  bottom: rem(-67);
+  right: calc(50% - min(50vw, 178px));
+  width: rem(55);
+  height: rem(59);
+  background-image: url("../images/common/medical-bg-star_1.png");
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+  @include mq("md") {
+    width: rem(126);
+    height: rem(138);
+    bottom: rem(-97);
+    right: calc(50% - min(50vw, 620px));
+  }
+}
+
+.medical-content__title {
+  text-align: center;
+  padding-top: rem(40);
+  @include mq('md') {
+    padding-top: 0;
+  }
+}
+
+.medical-content__container{
+  margin-top: rem(39);
+  @include mq('md') {
+    margin-top: rem(60);
+  }
+}
+
+.medical-content__cards:not(:first-child){
+  @include mq('md') {
+    margin-top: rem(38);
+  }
+}
+

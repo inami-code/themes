@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.footer {
+  background-color: $main-color;
+}
+
+.footer__copyright {
+  display: block;
+  padding-top: rem(17);
+  padding-bottom: rem(79);
+  color: $white;
+  font-size: rem(14);
+  text-align: center;
+  @include mq('md') {
+    padding-bottom: rem(19);
+  }
+}

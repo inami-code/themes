@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex" />
+    <!-- meta情報 -->
+    <title>デイトラ卒業課題:みなみ歯科クリニック</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="”icon”" href="" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script defer src="./assets/js/script.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner inner">
+        <h1 class="header__logo">
+          <a href="#" class="header__logoLink">
+            <img
+              src="./assets/images/common/clinic-logo.svg"
+              alt="ヘッダーロゴ"
+              width="270"
+              height="31"
+            />
+          </a>
+        </h1>
+        <div class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="header__container">
+          <nav class="header__pc-nav pc-nav">
+            <ul class="pc-nav__items">
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--home"></div>
+                  <div class="pc-nav__title">ホーム</div>
+                </a>
+              </li>
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--about"></div>
+                  <div class="pc-nav__title">当院について</div>
+                </a>
+              </li>
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--medical"></div>
+                  <div class="pc-nav__title">診療案内</div>
+                </a>
+              </li>
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--staff"></div>
+                  <div class="pc-nav__title">スタッフ紹介</div>
+                </a>
+              </li>
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--staff-blog"></div>
+                  <div class="pc-nav__title">スタッフブログ</div>
+                </a>
+              </li>
+              <li class="pc-nav__item">
+                <a href="#">
+                  <div class="pc-nav__icon pc-nav__icon--contact"></div>
+                  <div class="pc-nav__title">お問い合わせ</div>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <address class="pc-nav__info">
+            <div class="pc-nav__address">
+              &#12306;166-0001 東京都杉並区阿佐谷北7-3-1
+            </div>
+            <div class="pc-nav__tel">
+              <div class="pc-nav__tel-icon">
+                <img
+                  src="./assets/images/common/icon_tel.svg"
+                  alt="TELアイコン"
+                  width="28"
+                  height="28"
+                />
+              </div>
+              <div class="pc-nav__tel-number">03-1234-5678</div>
+            </div>
+          </address>
+        </div>
+
+        <nav class="header__sp-nav sp-nav js-sp-nav">
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_home-white.svg"
+                      alt="ホームアイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">ホーム</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="ホーム矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_about-white.svg"
+                      alt="当院についてアイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">当院について</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="当院について矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_medical-white.svg"
+                      alt="診療案内アイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">診療案内</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="診療案内矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_staff-white.svg"
+                      alt="スタッフ紹介アイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">スタッフ紹介</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="スタッフ紹介矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_staff-blog-white.svg"
+                      alt="スタッフブログアイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">スタッフブログ</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="スタッフブログ矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="sp-nav__item sp-nav__item--bottom">
+              <a href="#">
+                <div class="sp-nav__container">
+                  <div class="sp-nav__icon">
+                    <img
+                      src="./assets/images/common/icon_contact-white.svg"
+                      alt="お問い合わせアイコン"
+                      width="24"
+                      height="24"
+                    />
+                  </div>
+                  <div class="sp-nav__title">お問い合わせ</div>
+                </div>
+                <div class="sp-nav__arrow">
+                  <img
+                    src="./assets/images/common/icon_arrow-white.svg"
+                    alt="お問い合わせ矢印"
+                    width="14"
+                    height="14"
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="btn-reservation">
+      <a href="#">
+        <div class="btn-reservation__icon">
+          <img
+            src="./assets/images/common/btn-reservation.svg"
+            alt="予約ボタンアイコン"
+            width="49"
+            height="29"
+          />
+        </div>
+        <div class="btn-reservation__text">WEB予約<br />はこちら</div>
+      </a>
+    </div>
+
+    <div class="page-contact page-title">
+      <div class="page-title__inner inner">
+        <div class="page-title__top sub-mv">
+          <picture>
+            <source
+              srcset="./assets/images/common/contact-title-sp.png"
+              media="(max-width: 768px)"
+              type="image/png"
+              width="1160"
+              height="371"
+            />
+
+            <img
+              src="./assets/images/common/contact-title.png"
+              alt="スタッフ紹介"
+              width="335"
+              height="188"
+            />
+          </picture>
+          <div class="sub-mv__title">
+            <h1 class="sub-mv__ja-title">WEB予約</h1>
+            <div class="sub-mv__en-title">reserve</div>
+          </div>
+        </div>
+
+        <div class="page-reserve__breadcrumb breadcrumb">
+          <p class="breadcrumb__text">
+            <span class="is-home">ホーム</span> <span>></span
+            ><span>WEB予約</span> <span>></span><span>WEB予約完了</span>
+          </p>
+        </div>
+      </div>
+      <!-- page-blog__inner-->
+    </div>
+
+    <main>
+      <div class="page-reserve__success">
+        <div class="page-reserve__success-inner inner">
+          <p class="page-reserve__success-text">
+            WEBよりご予約いただき誠にありがとうございます。<br />
+            送信いただいた内容を確認して1営業日以内に返信いたします。<br />
+            <span
+              >※1営業日以内に当院からの返信がない場合には、お電話(TEL
+              03-1234-5678)にてお問い合わせ下さい。</span
+            >
+          </p>
+          <!-- /.page-reserve__success-text -->
+        </div>
+        <!-- /.page-reserve__success-inner inner -->
+      </div>
+      <!-- /.page-reserve__success -->
+    </main>
+
+    <div class="page-reserve__footer-info footer-info">
+      <div class="footer-info__bg-image"></div>
+      <div class="footer-info__inner inner">
+        <div class="footer-info__container">
+          <div class="footer-info__card">
+            <div class="footer-info__logo">
+              <img
+                src="./assets/images/common/clinic-logo.svg"
+                alt="フッターロゴ"
+                width="310"
+                height="33"
+              />
+            </div>
+            <div class="footer-info__info">
+              <p class="footer-info__post">&#12306;166-0001</p>
+              <p class="footer-info__address">東京都杉並区阿佐谷北7-3-1</p>
+            </div>
+            <div class="footer-info__tel">
+              <img
+                src="./assets/images/common/icon_tel.svg"
+                alt="TELアイコン"
+                width="28"
+                height="28"
+              />
+              <a class="footer-info__tel-number" href="tel:03-1234-5678"
+                >03-1234-5678</a
+              >
+            </div>
+            <p class="footer-info__opening-hours">(年中無休 AM9:00〜PM22:00)</p>
+            <div class="footer-info__btn">
+              <div class="footer-info__btn-reservation">
+                <a href="#" class="btn-main btn-main--reservation">
+                  <div class="btn-main--reservation-image"></div>
+                  <p>WEB予約</p>
+                </a>
+              </div>
+              <div class="footer-info__btn-contact">
+                <a href="#" class="btn-main btn-main--contact">
+                  <div class="btn-main--contact-image"></div>
+                  <p>お問い合わせ</p>
+                </a>
+              </div>
+            </div>
+            <div class="footer-info__time-sheet">
+              <img
+                src="./assets/images/common/top-timesheet.png"
+                alt="診療時間"
+                width="335"
+                height="117"
+              />
+            </div>
+          </div>
+          <div class="footer-info__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12959.169273010646!2d139.6239876555922!3d35.70672798193639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z5p2x5Lqs6YO95p2J5Lim5Yy66Zi_5L2Q6LC35YyXNy0zLTE!5e0!3m2!1sja!2sjp!4v1691836828897!5m2!1sja!2sjp"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <div class="footer-nav__inner inner">
+        <ul class="footer-nav__items">
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__item-link footer-nav__item-link--top"
+              >TOP</a
+            >
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__item-link footer-nav__item-link--top"
+              >当院について</a
+            >
+            <a href="#" class="footer-nav__item-link">ポリシーと特徴</a>
+            <a href="#" class="footer-nav__item-link">当院の様子</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__item-link footer-nav__item-link--top"
+              >スタッフ紹介</a
+            >
+            <a href="#" class="footer-nav__item-link">院長のあいさつ</a>
+            <a href="#" class="footer-nav__item-link">スタッフ</a>
+            <a href="#" class="footer-nav__item-link">スタッフブログ</a>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__item-link footer-nav__item-link--top"
+              >診療内容</a
+            >
+            <div class="footer-nav__item-wrap">
+              <div class="footer-nav__item-container">
+                <a href="#" class="footer-nav__item-link">一般歯科</a>
+                <a href="#" class="footer-nav__item-link">小児歯科</a>
+                <a href="#" class="footer-nav__item-link">予防歯科</a>
+                <a href="#" class="footer-nav__item-link">入れ歯</a>
+              </div>
+              <div class="footer-nav__item-container">
+                <a href="#" class="footer-nav__item-link">矯正歯科</a>
+                <a href="#" class="footer-nav__item-link">ホワイトニング</a>
+                <a href="#" class="footer-nav__item-link">口腔外科</a>
+                <a href="#" class="footer-nav__item-link">レーザー治療</a>
+              </div>
+            </div>
+          </li>
+          <li class="footer-nav__item">
+            <a href="#" class="footer-nav__item-link footer-nav__item-link--top"
+              >お問い合わせ</a
+            >
+            <a href="#" class="footer-nav__item-link">お問い合わせフォーム</a>
+            <a href="#" class="footer-nav__item-link">WEB予約</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <footer class="footer">
+      <small class="footer__copyright"
+        >&copy;2020-2021 みなみ歯科クリニック</small
+      >
+    </footer>
+    <div class="to-top">
+      <a href="#">
+        <img
+          src="./assets/images/common/to-top.png"
+          alt="トップに戻る"
+          width="52"
+          height="52"
+        />
+      </a>
+    </div>
+
+    <div class="reservation-nav">
+      <div class="reservation-nav__inner inner">
+        <div class="reservation-nav__content">
+          <div class="reservation-nav__left">
+            <div class="reservation-nav__info">
+              <div class="reservation-nav__tel-image">
+                <img
+                  src="./assets/images/common/icon_tel.svg"
+                  alt="TELアイコン"
+                  width="18"
+                  height="18"
+                />
+              </div>
+              <a class="reservation-nav__tel-number" href="tel:03-1234-5678"
+                >03-1234-5678</a
+              >
+            </div>
+            <p class="reservation-nav__opening-hours">
+              (年中無休 AM9:00〜PM22:00)
+            </p>
+          </div>
+          <div class="reservation-nav__right">
+            <a href="#" class="reservation-nav__btn">
+              <div class="reservation-nav__btn-image">
+                <img
+                  src="./assets/images/common/btn-reservation.svg"
+                  alt="予約ボタンアイコン"
+                  width="43"
+                  height="25"
+                />
+              </div>
+              <div class="reservation-nav__text">
+                WEB予約<br /><span>はこちら</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+@use "global" as *;
+
+.pc-nav__items {
+  display: flex;
+  height: inherit;
+}
+
+.pc-nav__item {
+  position: relative;
+  height: inherit;
+}
+
+.pc-nav__item::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: rem(10);
+  left: 33%;
+  /*線の形状*/
+  width: 35%;
+  height: 2px;
+  background-color: $main-color;
+  border-radius: rem(30);
+  /*アニメーションの指定*/
+  transition: transform 0.3s;
+  transform: scale(0, 1); /*X方向0、Y方向1*/
+  transform-origin: center top; /*上部中央基点*/
+}
+
+.pc-nav__item:hover::after {
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.pc-nav__item a {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  height: inherit;
+  padding: 0 rem(12);
+}
+
+.pc-nav__icon {
+  width: rem(24);
+  height: rem(24);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  transition: all 0.3s;
+}
+
+.pc-nav__icon--home {
+  background-image: url("../images/common/icon_home.svg");
+}
+.pc-nav__icon--about {
+  background-image: url("../images/common/icon_about.svg");
+}
+
+.pc-nav__icon--medical {
+  background-image: url("../images/common/icon_medical.svg");
+}
+
+.pc-nav__icon--staff {
+  background-image: url("../images/common/icon_staff.svg");
+}
+
+.pc-nav__icon--staff-blog {
+  background-image: url("../images/common/icon_staff-blog.svg");
+}
+
+.pc-nav__icon--contact {
+  background-image: url("../images/common/icon_contact.svg");
+}
+
+/* hover時のアイコンの色変更
+--------------------------------------------------*/
+@media (hover: hover) {
+  .pc-nav__item a:hover .pc-nav__icon--home {
+    background-image: url("../images/common/icon_home-active.svg");
+  }
+
+  .pc-nav__item a:hover .pc-nav__icon--about {
+    background-image: url("../images/common/icon_about-active.svg");
+  }
+
+  .pc-nav__item a:hover .pc-nav__icon--medical {
+    background-image: url("../images/common/icon_medical-active.svg");
+  }
+
+  .pc-nav__item a:hover .pc-nav__icon--staff {
+    background-image: url("../images/common/icon_staff-active.svg");
+  }
+
+  .pc-nav__item a:hover .pc-nav__icon--staff-blog {
+    background-image: url("../images/common/icon_staff-blog-active.svg");
+  }
+
+  .pc-nav__item a:hover .pc-nav__icon--contact {
+    background-image: url("../images/common/icon_contact-active.svg");
+  }
+}
+// --------------------------------------------------
+
+.pc-nav__title {
+  font-size: rem(11);
+  color: $black;
+  transition: color 0.3s;
+  white-space: nowrap;
+  margin-top: rem(6);
+}
+
+@media (hover: hover) {
+  .pc-nav__item a:hover .pc-nav__title {
+    color: $main-color;
+  }
+}
+
+.pc-nav__info {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  padding-left: rem(22);
+}
+
+.pc-nav__address {
+  font-size: rem(12);
+  text-align: right;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.pc-nav__tel {
+  display: flex;
+  align-items: center;
+  margin-top: rem(6);
+}
+
+.pc-nav__tel-icon {
+  width: rem(28);
+  height: rem(28);
+  aspect-ratio: 28 / 28;
+}
+
+.pc-nav__tel-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pc-nav__tel-number {
+  font-size: rem(32);
+  letter-spacing: -0.015em;
+  color: $main-color;
+  white-space: nowrap;
+  line-height: 1;
+  margin-left: rem(4);
+}

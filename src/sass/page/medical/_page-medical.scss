@@ -1,0 +1,28 @@
+@use 'global' as *;
+
+.page-medical__category{
+  margin-top: rem(66);
+  @include mq('md') {
+    margin-top: rem(83);
+  }
+}
+
+.page-medical__detail{
+  margin-top: rem(178);
+  @include mq('md') {
+     margin-top: rem(358);
+  }
+}
+.page-medical__content:not(:first-child){
+  margin-top: rem(205);
+  @include mq('md') {
+     margin-top: rem(455);
+  }
+}
+
+.page-medical__footer-info{
+  margin-top: rem(160);
+  @include mq('md') {
+    margin-top: rem(280);
+  }
+}

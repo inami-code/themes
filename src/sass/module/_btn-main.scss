@@ -1,0 +1,144 @@
+@use "global" as *;
+
+.btn-main {
+  display: inline-block;
+  font-size: rem(14);
+  line-height: 1;
+  background-color: $white;
+  color: $main-color;
+  border: 1px solid $main-color;
+  border-radius: rem(30);
+  padding: rem(12) rem(46);
+  transition: all 0.3s;
+}
+
+@media (hover: hover) {
+  .btn-main:hover {
+    background-color: $main-color;
+    color: $white;
+  }
+}
+
+.btn-main--arrow {
+  display: inline-block;
+  font-size: rem(14);
+  line-height: 1;
+  background-color: $white;
+  color: $main-color;
+  border: 1px solid $main-color;
+  border-radius: rem(30);
+  padding: rem(12) rem(40);
+  transition: all 0.3s;
+  position: relative;
+  @include mq('md') {
+    padding: rem(12) rem(46);
+  }
+}
+
+.btn-main--arrow::after {
+  content: "";
+  position: absolute;
+  width: rem(12);
+  height: rem(12);
+  top: 50%;
+  right: rem(12);
+  transform: translateY(-50%);
+  background-image: url(../images/common/icon_arrow-blue.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  transition: all 0.3s;
+}
+
+@media (hover: hover) {
+  .btn-main--arrow:hover::after {
+    right: rem(8);
+    background-image: url(../images/common/icon_arrow-white.svg);
+  }
+}
+
+.btn-main--reservation {
+  background-color: $main-color;
+  color: $white;
+  border: none;
+  padding: rem(9) rem(30);
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    padding: rem(20) rem(60);
+    font-size: rem(16);
+  }
+}
+
+@media (hover: hover) {
+  .btn-main.btn-main--reservation:hover {
+    background-color: $dark-blue;
+  }
+}
+
+.btn-main--reservation-image {
+  width: rem(25);
+  height: rem(18);
+  background-image: url(../images/common/btn-reservation.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    width: rem(25);
+    height: rem(14);
+  }
+}
+
+.btn-main--reservation p {
+  margin-left: rem(8);
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.btn-main--contact {
+  padding: rem(9) rem(20);
+  display: flex;
+  align-items: center;
+  @include mq("md") {
+    padding: rem(15) rem(42);
+    font-size: rem(16);
+  }
+}
+
+.btn-main--contact-image {
+  width: rem(18);
+  height: rem(18);
+  background-image: url(../images/common/icon_contact-active.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  @include mq('md') {
+    width: rem(24);
+    height: rem(24);
+    transition: background 0.3s;
+  }
+}
+
+
+@media (hover: hover) {
+  .btn-main--contact:hover {
+    background-color: $main-color;
+    color: $white;
+  }
+
+  .btn-main--contact:hover .btn-main--contact-image{
+    background-image: url(../images/common/icon_contact-white.svg);
+  }
+}
+
+.btn-main--contact p {
+  margin-left: rem(8);
+  white-space: nowrap;
+}
+
+
+.btn-main--form{
+  padding: rem(12) rem(116);
+  @include mq('md') {
+    font-size: rem(16);
+    padding: rem(19) rem(155);
+  }
+}

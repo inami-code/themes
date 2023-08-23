@@ -1,0 +1,80 @@
+@use "global" as *;
+
+/*=========================================================
+# top
+=========================================================*/
+
+/* ページネーション
+--------------------------------------------------*/
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  position: absolute;
+  width: inherit;
+  left: rem(-32);
+  bottom: rem(24);
+  @include mq('md') {
+    left: rem(-40);
+    bottom: rem(14);
+  }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $main-color;
+}
+
+.swiper-pagination {
+  transform: rotate(90deg);
+}
+
+
+/* 矢印
+--------------------------------------------------*/
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  bottom: 0;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+}
+
+.swiper-button-prev::after {
+  background-image: url(../images/common/mv-arrow-left.png);
+  width: rem(50);
+  height: rem(50);
+  left: rem(-35);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq('md') {
+    width: rem(66);
+    height: rem(66);
+    left: rem(-42);
+  }
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next::after {
+  background-image: url(../images/common/mv-arrow-right.png);
+  width: rem(50);
+  height: rem(50);
+  right: rem(-35);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq('md') {
+    width: rem(66);
+    height: rem(66);
+    right: rem(-44);
+  }
+}
+
+/*=========================================================
+# staff
+=========================================================*/
+
+/* 自動で流れ続ける記述
+--------------------------------------------------*/
+.swiper-wrapper.staff-slide__wrapper{
+  transition-timing-function: linear;
+}

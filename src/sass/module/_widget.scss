@@ -1,0 +1,125 @@
+@use "global" as *;
+
+.widget {
+}
+
+.widget__container:not(:first-child) {
+  margin-top: rem(58);
+}
+
+.widget__head {
+  display: flex;
+  align-items: center;
+  padding-bottom: rem(8);
+  border-bottom: 1px solid $black;
+}
+
+.widget__title-icon {
+  aspect-ratio: 1 / 1;
+}
+
+.widget__title-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.widget__title {
+  margin-left: rem(10);
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(20 / 16);
+  color: $black;
+}
+
+.widget__image {
+  margin-top: rem(20);
+  aspect-ratio: 335 / 210;
+}
+
+.widget__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.widget__clinic-name {
+  margin-top: rem(20);
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(20 / 16);
+  color: $black;
+}
+
+.widget__clinic-text {
+  margin-top: rem(14);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  color: $black;
+}
+
+.widget__about-link {
+  display: inline-block;
+  margin-top: rem(8);
+  margin-left: rem(3);
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  color: $main-color;
+  position: relative;
+}
+
+.widget__about-link:after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  right: rem(-17);
+  width: rem(18);
+  height: rem(18);
+  background-image: url("../images/common/icon_arrow-blue_2.svg");
+}
+
+
+
+.widget__category-items {
+  margin-left: rem(20);
+  margin-top: rem(10);
+}
+
+.widget__category-item {
+  display: block;
+  font-size: rem(16);
+  line-height: calc(36 / 16);
+  color: $black;
+  margin-left: rem(12);
+  position: relative;
+}
+
+.widget__category-item::before{
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: rem(-12);
+  width: rem(6);
+  height: rem(12);
+  background-image: url("../images/common/icon_arrow-blue_3.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+
+.widget__cards:not(:first-child){
+  margin-top: rem(20);
+  @include mq('md') {
+    margin-top: rem(6);
+  }
+}
+
+.widget__article{
+  margin-top: rem(20);
+  @include mq('md') {
+    margin-top: rem(12);
+  }
+}

@@ -1,0 +1,29 @@
+@use 'global' as *;
+
+.page-staff__greeting{
+  margin-top: rem(60);
+  @include mq('md') {
+    margin-top: rem(84);
+  }
+}
+
+.page-staff__footer-info{
+  margin-top: rem(128);
+  @include mq('md') {
+    margin-top: rem(180);
+  }
+}
+
+.page-staff__slide {
+  margin-top: rem(98);
+  @include mq('md') {
+    margin-top: rem(160);
+  }
+}
+
+.page-staff__introduction{
+margin-top: rem(100);
+@include mq('md') {
+margin-top: rem(165);
+}
+}

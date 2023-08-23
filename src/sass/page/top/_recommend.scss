@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.recommend__title {
+  text-align: center;
+}
+
+.recommend__content {
+  margin-top: rem(40);
+  @include mq("md") {
+    max-width: rem(966);
+    margin: 0 auto;
+  }
+}
+
+.recommend__items {
+  max-width: rem(280);
+  width: 100%;
+  margin: 0 auto;
+  @include mq("md") {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 100%;
+    margin-top: rem(58);
+  }
+}
+
+.recommend__item {
+  flex: 1;
+  text-align: center;
+  @include mq("md") {
+    padding: 0;
+    max-width: rem(280);
+    width: 100%;
+  }
+}
+
+.recommend__item:not(:first-child){
+margin-top: rem(60);
+@include mq('md') {
+  margin-top: 0;
+}
+}
+
+.recommend__item-catch {
+  aspect-ratio: 177 / 32;
+  width: rem(177);
+  margin: 0 auto;
+}
+
+.recommend__item-catch img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommend__item-image {
+  aspect-ratio: 220 / 220;
+  width: rem(220);
+  margin: 0 auto;
+}
+
+.recommend__item-image img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: rem(3);
+}
+
+.recommend__item-lead {
+  display: block;
+  background-color: $main-color;
+  color: $white;
+  font-size: rem(20);
+  line-height: calc(32 / 20);
+  letter-spacing: 0.08em;
+  padding: rem(5) 0;
+  border-radius: rem(55);
+  position: relative;
+  max-width: rem(290);
+  width: 100%;
+  margin-top: rem(-22);
+  @include mq('md') {
+    padding: rem(8) 0;
+  }
+}
+
+.recommend__item-lead::after {
+  position: absolute;
+  content: "";
+  bottom: rem(-17);
+  left: 48%;
+  height: 20px;
+  width: 21px;
+  transform: rotate(30deg) skewY(30deg) scaleX(0.86666) translateX(-60%);
+  background-color: $main-color;
+  border-radius: 25%;
+  z-index: -1;
+}
+
+.recommend__item-text {
+  text-align: left;
+  color: $black;
+  font-size: rem(14);
+  line-height: calc(24 / 14);
+  margin-top: rem(30);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recommend__item-text span {
+  color: $accent-color;
+}

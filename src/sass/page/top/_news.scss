@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.news__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.news__title {
+  display: flex;
+  gap: rem(16);
+  align-items: end;
+  margin-left: rem(14);
+}
+
+.news__ja-title {
+  font-size: rem(20);
+  letter-spacing: 0.08em;
+  font-weight: $bold;
+  line-height: 1;
+  color: $black;
+}
+
+.news__archive {
+  font-size: rem(11);
+  color: #888;
+  border-bottom: 1px solid #888;
+  transition: opacity .3s;
+  @include mq('md') {
+    font-size: rem(12);
+  }
+}
+
+@media (hover:hover){
+  .news__archive:hover{
+    opacity: .7;
+  }
+}
+
+.news__items {
+  margin-top: rem(10);
+}
+
+.news__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $black;
+  border-top: 1px solid $black;
+  padding: rem(11) rem(8);
+  @include mq('md') {
+    padding: rem(11) 0;
+  }
+}
+
+.news__item-wrap {
+  display: flex;
+  align-items: center;
+  gap: rem(23);
+  @include mq('md') {
+    margin-left: rem(14);
+  }
+}
+
+.news__time {
+  font-size: rem(12);
+  color: $black;
+  transition: color 0.3s;
+}
+
+.news__item:hover .news__time {
+  color: $main-color;
+}
+
+.news__text {
+  font-size: rem(14);
+  color: $black;
+  transition: color 0.3s;
+  
+}
+
+.news__item:hover .news__text {
+  color: $main-color;
+}
+
+.news__arrow {
+  width: rem(14);
+  height: rem(14);
+  background-image: url("../images/common/icon_arrow-black.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.3s;
+}
+
+
+@media (hover:hover){
+  .news__item:hover .news__arrow {
+    transform: translateX(50%);
+    background-image: url("../images/common/icon_arrow-blue.svg");
+  }
+}

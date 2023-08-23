@@ -1,0 +1,54 @@
+@use "global" as *;
+
+
+.section-header {
+  display: inline-block;
+  font-size: rem(20);
+  font-weight: $bold;
+  line-height: calc(28 / 20);
+  letter-spacing: 0.08em;
+  color: $black;
+  position: relative;
+
+  @include mq("md") {
+    font-size: rem(28);
+  }
+}
+
+.section-header::before {
+  content: "";
+  position: absolute;
+  width: rem(49);
+  height: rem(13);
+  top: 50%;
+  left: rem(-65);
+  transform: translateY(-50%);
+  background-image: url(../images/common/section-title_deco.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    width: rem(68);
+    height: rem(20);
+    left: rem(-96);
+  }
+}
+
+.section-header::after {
+  content: "";
+  position: absolute;
+  width: rem(49);
+  height: rem(13);
+  top: 50%;
+  right: rem(-65);
+  transform: translateY(-50%);
+  background-image: url(../images/common/section-title_deco.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include mq("md") {
+    width: rem(68);
+    height: rem(20);
+    right: rem(-93);
+  }
+}
