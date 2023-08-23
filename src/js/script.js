@@ -95,14 +95,20 @@ topBtn.click(function () {
   // スムーススクロール（headerに被らない）
   // ------------------------------------
 
-  $(document).on("click", 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $("header").innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
-    $("html,body").animate({ scrollTop: targetY }, time, "swing");
-    return false;
+  $(function () {
+    const height = $(".js-header").height();
+    $("main").css("margin-top", height);
+  });
+  // ページ内スクロール
+  $(function () {
+    $('a[href^="#"]').click(function () {
+      const speed = 600;
+      let href = $(this).attr("href");
+      let target = $(href == "#" || href == "" ? "html" : href);
+      let position = target.offset().top;
+      $("body,html").animate({ scrollTop: position }, speed, "swing");
+      return false;
+    });
   });
 
 
