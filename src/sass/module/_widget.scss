@@ -1,7 +1,5 @@
 @use "global" as *;
 
-.widget {
-}
 
 .widget__container:not(:first-child) {
   margin-top: rem(58);
@@ -113,13 +111,13 @@
 .widget__cards:not(:first-child){
   margin-top: rem(20);
   @include mq('md') {
-    margin-top: rem(6);
+    margin-top: rem(23);
   }
 }
 
 .widget__article{
   margin-top: rem(20);
   @include mq('md') {
-    margin-top: rem(12);
+    margin-top: rem(20);
   }
 }

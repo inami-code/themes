@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .article__headline {
   font-size: rem(20);
   letter-spacing: 0.08em;
@@ -51,24 +52,30 @@
   }
 }
 
-.article__text {
+.article__item{
+  margin-top: rem(60);
+  @include mq('md') {
+    margin-top: rem(80);
+  }
+}
+
+.article__item p{
   font-size: rem(14);
   line-height: calc(24 / 14);
   color: $black;
-  margin-top: rem(58);
+  margin-top: rem(20);
 }
 
-.article__text a{
+.article__item > :first-child {
+  margin-top: 0;
+}
+
+.article__item a{
   color: $main-color;
   text-decoration: underline;
 }
 
-.article__text span:not(:first-child){
-  display: block;
-margin-top: rem(20);
-}
-
-.article__headline2 {
+.article__item h2.wp-block-heading{
   font-size: rem(18);
   letter-spacing: 0.08em;
   line-height: calc(32 / 18);
@@ -84,7 +91,7 @@ margin-top: rem(20);
   }
 }
 
-.article__headline2::after{
+.article__item h2.wp-block-heading::after{
   content: "";
   position: absolute;
   top: 50%;
@@ -99,19 +106,19 @@ margin-top: rem(20);
   }
 }
 
-.article__image {
+.article__item .wp-block-image{
   margin-top: rem(20);
   aspect-ratio: 335 / 209;
 }
 
-.article__image img{
+.article__item .wp-block-image img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: inline-block;
 }
 
-.article__headline3 {
+.article__item h3 {
   font-size: rem(16);
   letter-spacing: 0.08em;
   line-height: calc(32 / 16);
@@ -125,14 +132,14 @@ margin-top: rem(20);
   }
 }
 
-.article__text.article__text--2 {
+.article__item h3 + p {
   margin-top: rem(18);
   @include mq('md') {
     margin-top: rem(14);
   }
 }
 
-.article__headline4 {
+.article__item h4 {
   font-size: rem(14);
   letter-spacing: 0.08em;
   line-height: calc(32 / 14);
@@ -145,26 +152,34 @@ margin-top: rem(20);
   }
 }
 
-.article__text.article__text--3 {
+.article__item h4 + p {
   margin-top: rem(8);
 }
 
-.article__lists {
+.article__item ul{
   margin-top: rem(11);
   margin-left: rem(14);
 }
 
-.article__list {
+
+.article__item li{
   font-size: rem(16);
   line-height: calc(30 / 16);
   color: $black;
 }
 
-.article__list:not(:first-child){
+.article__item li:not(:first-child){
   margin-top: rem(4);
 }
 
 
 .article__pagination{
   height: rem(76);
+}
+
+.article__page-link{
+  margin-top: rem(40);
+  @include mq('md') {
+    margin-top: rem(100);
+  }
 }

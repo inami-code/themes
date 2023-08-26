@@ -1,7 +1,6 @@
 @use "global" as *;
 
 
-
 .page-archive__content {
   margin-top: rem(60);
   @include mq("md") {
@@ -19,6 +18,7 @@
 .page-archive__main{
   @include mq('md') {
     flex: 0 1 auto;
+    width: 100%;
   }
 }
 
@@ -39,7 +39,13 @@
 
 
 .page-archive__pagination{
-  height: 91px;// 仮の値
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: rem(60);
+@include mq('md') {
+  margin-top: rem(100);
+}
 }
 
 .page-archive__footer-info {

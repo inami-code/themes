@@ -1,0 +1,80 @@
+@use "global" as *;
+
+.page-link {
+  width: 100%;
+  position: relative;
+}
+
+.page-link__items{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-link__prev,
+.page-link__next {
+  display: inline-block;
+  padding: rem(9) rem(13);
+  color: $white;
+  border-radius: rem(4);
+  background-color: $main-color;
+  position: relative;
+}
+
+.page-link__prev {
+  padding-left: rem(38);
+  left: rem(-128);
+}
+
+.page-link__prev::after {
+  content: "";
+  position: absolute;
+  width: rem(16);
+  height: rem(16);
+  top: 50%;
+  left: rem(15);
+  transform: translateY(-50%);
+  background-image: url("../images/common/icon_circle-left.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+}
+
+.page-link__next {
+  padding-right: rem(38);
+  right: rem(-128);
+
+}
+
+.page-link__next::after {
+  content: "";
+  position: absolute;
+  width: rem(16);
+  height: rem(16);
+  top: 50%;
+  right: rem(15);
+  transform: translateY(-50%);
+  background-image: url("../images/common/icon_circle-right.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.3s;
+}
+
+.page-link__center{
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.page-link__archive {
+  display: inline-block;
+  padding: rem(9) rem(13);
+  color: $main-color;
+  border-radius: rem(4);
+  background-color: $white;
+  border: 1px solid $main-color;
+  z-index: 100;
+}

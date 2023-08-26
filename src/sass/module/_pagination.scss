@@ -1,0 +1,81 @@
+@use "global" as *;
+
+
+.page-numbers {
+  display: inline-block;
+  padding: rem(9) rem(13);
+  color: $main-color;
+  border-radius: rem(4);
+  background-color: $white;
+  border: 1px solid $main-color;
+  transition: all .3s;
+}
+
+@media (hover:hover){
+  .page-numbers:hover{
+    background-color: $main-color;
+    color: $white;
+  }
+}
+
+.page-numbers:not(:first-child) {
+  margin-left: rem(5);
+}
+.page-numbers.current {
+  background: $main-color;
+  color: #fff;
+}
+.pagination .prev,
+.pagination .next {
+  background-color: $main-color;
+  color: $white;
+  position: relative;
+}
+
+.pagination .prev {
+  padding-left: rem(38);
+}
+
+.pagination .prev::after {
+  content: "";
+  position: absolute;
+  width: rem(16);
+  height: rem(16);
+  top: 50%;
+  left: rem(15);
+  transform: translateY(-50%);
+  background-image: url("../images/common/icon_circle-left.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform .3s;
+}
+
+@media (hover:hover){
+  .pagination .prev:hover::after{
+  transform: translate(-40%,-50%);
+  }
+}
+
+.pagination .next{
+  padding-right: rem(38);
+}
+
+.pagination .next::after {
+  content: "";
+  position: absolute;
+  width: rem(16);
+  height: rem(16);
+  top: 50%;
+  right: rem(15);
+  transform: translateY(-50%);
+  background-image: url("../images/common/icon_circle-right.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform .3s;
+}
+
+@media (hover:hover){
+  .pagination .next:hover::after{
+  transform: translate(40%,-50%);
+  }
+}
