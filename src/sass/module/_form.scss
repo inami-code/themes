@@ -163,7 +163,7 @@ position: absolute;
   margin: 0;
 }
 
-.form__item-radio-part {
+.form__item-radio .wpcf7-list-item-label {
   display: inline-block;
   font-size: rem(14);
   line-height: 1;
@@ -172,7 +172,7 @@ position: absolute;
   position: relative;
 }
 
-.form__item-radio-part::before {
+.form__item-radio .wpcf7-list-item-label::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -182,9 +182,10 @@ position: absolute;
   height: rem(25);
   border: 2px solid $main-color;
   border-radius: 50%;
+  background-color: $white;
 }
 
-.form__item-radio input:checked + .form__item-radio-part::after {
+.form__item-radio input:checked + .wpcf7-list-item-label::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -196,44 +197,35 @@ position: absolute;
   background-color: $main-color;
 }
 
-.form__item-radio-part.form__item-radio-part--right {
+.form__item-radio .wpcf7-list-item{
+  margin: 0;
+}
+
+.form__item-radio .wpcf7-list-item.last {
   margin-left: rem(39);
   @include mq('md') {
     margin-left: rem(30);
   }
 }
 
-.form__checkbox {
-  display: inline-block;
-    margin-right: rem(18);
-    padding: rem(7) 0;
-    @include mq('md') {
-      margin-right: rem(25);
-    }
+
+.form__checkbox-input .wpcf7-list-item {
+  margin-right: rem(18);
+  margin-left: 0;
+      padding: rem(7) 0;
+      @include mq('md') {
+        margin-right: rem(20);
+      }
 }
 
-
-.form__checkbox-label {
-  position: relative;
-}
-
-.form__checkbox-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0;
-}
-
-.form__item-checkbox-part {
+.form__checkbox-input .wpcf7-list-item {
   display: inline-block;
   font-size: rem(14);
   color: $black;
-  padding-left: rem(30);
   position: relative;
 }
 
-.form__item-checkbox-part::before {
+.form__checkbox-input .wpcf7-list-item::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -242,20 +234,37 @@ position: absolute;
   width: rem(24);
   height: rem(24);
   border: 1px solid $main-color;
+  z-index: -10;
 }
 
-.form__checkbox-label input:checked + .form__item-checkbox-part::after {
+.wpcf7-list-item-label{
+  padding-left: rem(20);
+  }
+  
+
+.form__checkbox-input input:checked + .wpcf7-list-item-label::after {
   position: absolute;
   content: "";
   width: rem(7);
   height: rem(15);
-  top: 0;
+  top: rem(8);
   left: rem(8);
   border-right: 2px solid $main-color;
   border-bottom: 2px solid $main-color;
   transform: rotate(45deg);
 }
 
+
+
 .form__date:not(:first-child){
 margin-top: rem(15);
+}
+
+.wpcf7-spinner {
+  display: none !important;
+}
+
+
+.wpcf7-form.sent .wpcf7-response-output {
+  display: none !important;
 }
