@@ -5,7 +5,7 @@
   overflow: hidden;
   padding-top: rem(150);
   padding-bottom: rem(100);
-  @include mq('md') {
+  @include mq("md") {
     padding-top: rem(245);
     padding-bottom: rem(260);
   }
@@ -40,9 +40,15 @@
 }
 
 .policy__content {
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
   @include mq("md") {
     flex: 1;
     margin-top: rem(36);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
   }
 }
 
@@ -71,14 +77,14 @@
   }
 }
 
-.policy__text p:last-child{
+.policy__text p:last-child {
   margin-top: rem(22);
 }
 
 .policy__btn {
   margin-top: rem(36);
   text-align: center;
-  @include mq('md') {
+  @include mq("md") {
     text-align: left;
     margin-top: rem(40);
   }
@@ -100,7 +106,7 @@
   height: 100%;
   object-fit: cover;
   margin-left: calc(50% - 50vw);
-  @include mq('md') {
+  @include mq("md") {
     margin-left: 0;
   }
 }

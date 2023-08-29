@@ -10,17 +10,6 @@
   }
 }
 
-.form__item.form__item--radio{
-  padding-bottom: rem(28);
-  @include mq('md') {
-    padding-bottom: rem(38);
-  }
-}
-
-.form__item.form__item--checkbox{
-  padding: rem(18) 0;
-}
-
 .form__item:last-child {
   border-bottom: 1px solid #ddd;
 }
@@ -30,8 +19,6 @@
     flex: 0 0 rem(240);
   }
 }
-
-
 
 .form__item-label {
   font-size: rem(16);
@@ -58,7 +45,7 @@
   }
 }
 
-.form__item-label--visit.is-required.form__item-label::after{
+.form__item-label--visit.is-required.form__item-label::after {
   right: rem(-25);
 }
 
@@ -67,14 +54,14 @@
   font-size: rem(11);
   color: #888;
   margin-top: rem(-5);
-  }
+}
 
 .form__item-input input[type="text"],
 .form__item-input input[type="email"],
 .form__item-input input[type="tel"],
 .form__item-input input[type="date"],
 .form__item-input textarea,
-.form__item-input select{
+.form__item-input select {
   max-width: 100%;
   width: 100%;
   display: block;
@@ -82,7 +69,6 @@
   background-color: #f6f6f6;
   padding: rem(13) rem(16);
   color: $black;
-
 }
 
 .form__item-input textarea {
@@ -98,7 +84,7 @@
   color: #c2c2c2;
 }
 
-.form__item-input select{
+.form__item-input select {
   display: block;
   position: relative;
   background-image: url(../images/common/icon_arrow-form.svg);
@@ -106,39 +92,30 @@
   background-position: right rem(10) center;
 }
 
-.form__item-input input[type="date"]{
-  background-image: url(../images/common/icon_form-date.svg);
-  background-repeat: no-repeat;
-  background-position: right rem(10) center;
-  position: relative;
+.form__item-input input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
-
-.form__item-input input[type="date"]::-webkit-calendar-picker-indicator{
-opacity: 0;
-width: 100%;
-height: 100%;
-position: absolute;
-}
-
 
 .form__item-input {
   margin-top: rem(8);
   width: 100%;
-  
+
   @include mq("md") {
     margin-top: 0;
     flex: 0 1 auto;
   }
 }
 
-.form__item-input.form__item-input--radio{
+.form__item-input.form__item-input--radio {
   margin-top: rem(11);
 }
 
-
-.form__item-input.form__item-input--checkbox{
+.form__item-input.form__item-input--checkbox {
   margin-top: rem(13);
-  @include mq('md') {
+  @include mq("md") {
     margin: 0;
   }
 }
@@ -168,7 +145,7 @@ position: absolute;
   font-size: rem(14);
   line-height: 1;
   color: $black;
-  padding-left: rem(30);
+  padding-left: rem(24);
   position: relative;
 }
 
@@ -176,7 +153,7 @@ position: absolute;
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
+  left: rem(-8);
   transform: translateY(-50%);
   width: rem(25);
   height: rem(25);
@@ -189,7 +166,7 @@ position: absolute;
   content: "";
   position: absolute;
   top: 50%;
-  left: rem(6.5);
+  left: rem(-1.5);
   transform: translateY(-50%);
   width: rem(12);
   height: rem(12);
@@ -197,25 +174,24 @@ position: absolute;
   background-color: $main-color;
 }
 
-.form__item-radio .wpcf7-list-item{
+.form__item-radio .wpcf7-list-item {
   margin: 0;
 }
 
 .form__item-radio .wpcf7-list-item.last {
   margin-left: rem(39);
-  @include mq('md') {
+  @include mq("md") {
     margin-left: rem(30);
   }
 }
 
-
 .form__checkbox-input .wpcf7-list-item {
   margin-right: rem(18);
   margin-left: 0;
-      padding: rem(7) 0;
-      @include mq('md') {
-        margin-right: rem(20);
-      }
+  padding: rem(8.2) 0;
+  @include mq("md") {
+    margin-right: rem(33);
+  }
 }
 
 .form__checkbox-input .wpcf7-list-item {
@@ -237,10 +213,9 @@ position: absolute;
   z-index: -10;
 }
 
-.wpcf7-list-item-label{
+.wpcf7-list-item-label {
   padding-left: rem(20);
-  }
-  
+}
 
 .form__checkbox-input input:checked + .wpcf7-list-item-label::after {
   position: absolute;
@@ -254,17 +229,25 @@ position: absolute;
   transform: rotate(45deg);
 }
 
+.form__date {
+  background-image: url(../images/common/icon_form-date.svg);
+  background-repeat: no-repeat;
+  background-position: right rem(10) center;
+  position: relative;
+}
 
-
-.form__date:not(:first-child){
-margin-top: rem(15);
+.form__date:not(:first-child) {
+  margin-top: rem(15);
 }
 
 .wpcf7-spinner {
   display: none !important;
 }
 
-
 .wpcf7-form.sent .wpcf7-response-output {
   display: none !important;
+}
+
+.form__item-input select {
+  color: #c2c2c2;
 }

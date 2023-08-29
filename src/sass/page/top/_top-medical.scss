@@ -1,8 +1,8 @@
-@use 'global' as *;
+@use "global" as *;
 
 .top-medical {
-margin-top: rem(180);
-@include mq('md') {
-margin-top: rem(338);
-}
+  margin-top: rem(185);
+  @include mq("md") {
+    margin-top: rem(338);
+  }
 }

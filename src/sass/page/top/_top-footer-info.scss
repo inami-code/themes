@@ -1,8 +1,8 @@
-@use 'global' as *;
+@use "global" as *;
 
-.top-footer-info{
+.top-footer-info {
   margin-top: rem(130);
-  @include mq('md') {
-    margin-top: rem(188);
+  @include mq("md") {
+    margin-top: rem(180);
   }
 }

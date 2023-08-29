@@ -15,8 +15,8 @@
   // swiper矢印
   position: relative;
   aspect-ratio: 335 / 447;
-  @include mq('md') {
-    aspect-ratio: 1160 / 520 ;
+  @include mq("md") {
+    aspect-ratio: 1160 / 520;
   }
 }
 
@@ -31,7 +31,7 @@
 .mv__lead {
   position: absolute;
   content: "";
-  bottom: rem(40);
+  bottom: rem(43);
   left: rem(20);
   z-index: 10;
   @include mq("md") {
@@ -41,7 +41,10 @@
 }
 
 .mv__lead-wrap:not(:first-child) {
-  margin-top: rem(21);
+  margin-top: rem(12);
+  @include mq("md") {
+    margin-top: rem(21);
+  }
 }
 
 .mv__lead-text {
@@ -49,8 +52,9 @@
   display: inline-block;
   font-size: rem(20);
   color: $white;
-  letter-spacing: 0.09em;
+  letter-spacing: 0.08em;
   @include mq("md") {
+    letter-spacing: 0.09em;
     font-size: rem(32);
   }
 }
@@ -58,19 +62,31 @@
 .mv__lead-text::after {
   content: "";
   position: absolute;
-  bottom: rem(-10);
+  bottom: rem(-2);
   left: 0;
   width: 100%;
-  height: rem(10);
   display: inline-block;
+  height: rem(6);
+  background-size: rem(6);
   background: radial-gradient(
     circle farthest-side,
     $white,
-    $white 50%,
-    transparent 50%,
+    $white 35%,
+    transparent 35%,
     transparent
   );
-  background-size: rem(10);
+  @include mq("md") {
+    bottom: rem(-9);
+    height: rem(10);
+    background-size: rem(9.9);
+    background: radial-gradient(
+      circle farthest-side,
+      $white,
+      $white 50%,
+      transparent 50%,
+      transparent
+    );
+  }
 }
 
 .mv__foot-content {
@@ -104,8 +120,12 @@
 }
 
 .mv__news {
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
   margin-top: rem(43);
   @include mq("md") {
+    max-width: 100%;
     width: 53.2%;
     margin-top: rem(56);
   }

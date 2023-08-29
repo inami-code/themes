@@ -1,18 +1,17 @@
 @use "global" as *;
 
-
 .page-numbers {
   display: inline-block;
-  padding: rem(9) rem(13);
+  padding: rem(5) rem(11);
   color: $main-color;
   border-radius: rem(4);
   background-color: $white;
   border: 1px solid $main-color;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-@media (hover:hover){
-  .page-numbers:hover{
+@media (hover: hover) {
+  .page-numbers:hover {
     background-color: $main-color;
     color: $white;
   }
@@ -47,16 +46,16 @@
   background-image: url("../images/common/icon_circle-left.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
-@media (hover:hover){
-  .pagination .prev:hover::after{
-  transform: translate(-40%,-50%);
+@media (hover: hover) {
+  .pagination .prev:hover::after {
+    transform: translate(-40%, -50%);
   }
 }
 
-.pagination .next{
+.pagination .next {
   padding-right: rem(38);
 }
 
@@ -71,11 +70,11 @@
   background-image: url("../images/common/icon_circle-right.svg");
   background-size: cover;
   background-repeat: no-repeat;
-  transition: transform .3s;
+  transition: transform 0.3s;
 }
 
-@media (hover:hover){
-  .pagination .next:hover::after{
-  transform: translate(40%,-50%);
+@media (hover: hover) {
+  .pagination .next:hover::after {
+    transform: translate(40%, -50%);
   }
 }

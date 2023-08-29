@@ -28,7 +28,7 @@
   left: 51%;
   transform: translate(-50%, -50%);
   text-align: center;
-  @include mq('md') {
+  @include mq("md") {
     top: 51%;
     left: 50%;
   }

@@ -1,9 +1,9 @@
-@use 'global' as *;
+@use "global" as *;
 
-.top-concept{
-padding-top: rem(170);
-@include mq('md') {
-  padding-top: rem(240);
-  padding-bottom: rem(107);
-}
+.top-concept {
+  padding-top: rem(170);
+  @include mq("md") {
+    padding-top: rem(240);
+    padding-bottom: rem(107);
+  }
 }

@@ -4,7 +4,7 @@
   padding-top: rem(50);
   padding-bottom: rem(55);
   background: $light-blue;
-  @include mq('md') {
+  @include mq("md") {
     padding-top: rem(35);
     padding-bottom: rem(53);
   }
@@ -39,7 +39,7 @@
   // padding-left: rem(16);
   transition: opacity 0.3s;
   margin-left: rem(12);
-  @include mq('md') {
+  @include mq("md") {
     padding: rem(12) 0;
   }
 }

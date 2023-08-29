@@ -5,9 +5,9 @@
   position: relative;
 }
 
-.page-link__items{
+.page-link__items {
   position: absolute;
-  top: 0;
+  top: rem(3);
   left: 50%;
   transform: translateX(-50%);
 }
@@ -15,16 +15,25 @@
 .page-link__prev,
 .page-link__next {
   display: inline-block;
-  padding: rem(9) rem(13);
+  padding: rem(7) rem(13);
   color: $white;
   border-radius: rem(4);
   background-color: $main-color;
   position: relative;
+  font-size: rem(14);
+  @include mq("md") {
+    padding: rem(7) rem(13);
+  }
 }
 
 .page-link__prev {
-  padding-left: rem(38);
-  left: rem(-128);
+  padding-left: rem(35);
+  left: rem(-122);
+  margin-left: rem(20);
+  @include mq("md") {
+    padding-left: rem(46);
+    left: rem(-128);
+  }
 }
 
 .page-link__prev::after {
@@ -33,18 +42,32 @@
   width: rem(16);
   height: rem(16);
   top: 50%;
-  left: rem(15);
+  left: rem(10);
   transform: translateY(-50%);
   background-image: url("../images/common/icon_circle-left.svg");
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.3s;
+  @include mq("md") {
+    left: rem(15);
+    transition: transform 0.3s;
+  }
+}
+
+@media (hover: hover) {
+  .page-link__prev:hover::after {
+    transform: translate(-40%, -50%);
+  }
 }
 
 .page-link__next {
-  padding-right: rem(38);
-  right: rem(-128);
-
+  padding-right: rem(35);
+  right: rem(-122);
+  margin-right: rem(20);
+  @include mq("md") {
+    padding-right: rem(46);
+    right: rem(-128);
+  }
 }
 
 .page-link__next::after {
@@ -53,15 +76,24 @@
   width: rem(16);
   height: rem(16);
   top: 50%;
-  right: rem(15);
+  right: rem(10);
   transform: translateY(-50%);
   background-image: url("../images/common/icon_circle-right.svg");
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.3s;
+  @include mq("md") {
+    right: rem(15);
+    transition: transform 0.3s;
+  }
+}
+@media (hover: hover) {
+  .page-link__next:hover::after {
+    transform: translate(40%, -50%);
+  }
 }
 
-.page-link__center{
+.page-link__center {
   position: absolute;
   z-index: 100;
   top: 0;
@@ -71,10 +103,18 @@
 
 .page-link__archive {
   display: inline-block;
-  padding: rem(9) rem(13);
+  padding: rem(8) rem(13);
   color: $main-color;
   border-radius: rem(4);
   background-color: $white;
   border: 1px solid $main-color;
   z-index: 100;
+  transition: all 0.3s;
+}
+
+@media (hover: hover) {
+  .page-link__archive:hover {
+    background-color: $main-color;
+    color: $white;
+  }
 }

@@ -4,18 +4,17 @@
   text-align: center;
   margin-top: rem(65);
   @include mq("md") {
-    margin-top: rem(80);
+    margin-top: rem(85);
   }
 }
 
-.page-about__second-title{
+.page-about__second-title {
   text-align: center;
   margin-top: rem(100);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(160);
   }
 }
-
 
 .page-about__picture {
   margin-top: rem(38);
@@ -50,10 +49,9 @@
   border-radius: rem(20);
 }
 
-
-.page-about__footer-info{
+.page-about__footer-info {
   margin-top: rem(130);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(184);
   }
 }

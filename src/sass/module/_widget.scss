@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .widget__container:not(:first-child) {
   margin-top: rem(58);
 }
@@ -77,8 +76,6 @@
   background-image: url("../images/common/icon_arrow-blue_2.svg");
 }
 
-
-
 .widget__category-items {
   margin-left: rem(20);
   margin-top: rem(10);
@@ -93,7 +90,7 @@
   position: relative;
 }
 
-.widget__category-item::before{
+.widget__category-item::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -106,18 +103,13 @@
   background-size: contain;
 }
 
-
-
-.widget__cards:not(:first-child){
+.widget__cards:not(:first-child) {
   margin-top: rem(20);
-  @include mq('md') {
-    margin-top: rem(23);
-  }
 }
 
-.widget__article{
+.widget__article {
   margin-top: rem(20);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(20);
   }
 }

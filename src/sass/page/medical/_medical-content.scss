@@ -1,5 +1,4 @@
-@use 'global' as *;
-
+@use "global" as *;
 
 .medical-content {
   position: relative;
@@ -21,7 +20,8 @@
   background-position: center bottom;
   background-size: 100%;
   background-repeat: no-repeat;
-  @include mq('md') {
+  z-index: -10;
+  @include mq("md") {
     background-image: url("../images/common/medical-bg_1.png");
   }
 }
@@ -84,22 +84,19 @@
 
 .medical-content__title {
   text-align: center;
-  padding-top: rem(40);
-  @include mq('md') {
+  padding-top: rem(33);
+  @include mq("md") {
     padding-top: 0;
   }
 }
 
-.medical-content__container{
+.medical-content__container {
   margin-top: rem(39);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(60);
   }
 }
 
-.medical-content__cards:not(:first-child){
-  @include mq('md') {
-    margin-top: rem(38);
-  }
+.medical-content__cards:not(:first-child) {
+  margin-top: rem(38);
 }
-

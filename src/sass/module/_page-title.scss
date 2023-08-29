@@ -1,9 +1,8 @@
-@use 'global' as *;
+@use "global" as *;
 
-.page-title{
+.page-title {
   padding-top: rem(80);
-  @include mq('md') {
+  @include mq("md") {
     padding-top: rem(120);
   }
 }
-

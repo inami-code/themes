@@ -36,3 +36,14 @@ $main-color: #1391e6;
 $dark-blue: #0060a0;
 $light-blue: #dff1fd;
 $accent-color:#EE5A6D;
+
+
+////////////////////
+// ハンバーガーメニュー展開時背景固定（スクロールさせない）
+// ※jQuerynも記載
+////////////////////
+body.fixed {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  }

@@ -1,10 +1,10 @@
 @use 'global' as *;
 
 .breadcrumb{
-  margin-top: rem(12);
+  margin-top: rem(13);
 
   @include mq('md') {
-    margin-top: rem(14);
+    margin-top: rem(17);
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
@@ -14,15 +14,21 @@
 
 .breadcrumb__text{
   font-size: rem(12);
+  letter-spacing: -0.03em;
   line-height: 1;
   color: $black;
 }
 
+.breadcrumb__text span{
+  padding-right: rem(4);
+}
+
 .breadcrumb__text span:not(:first-child){
-  margin-left: rem(8);
+ padding-left: rem(6);
   letter-spacing: 0.03em;
 }
 
-.breadcrumb__text span.is-home{
+.breadcrumb__text span:first-child span{
   color: #C2C2C2;
+
 }

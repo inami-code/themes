@@ -14,7 +14,7 @@
   width: inherit;
   left: rem(-32);
   bottom: rem(24);
-  @include mq('md') {
+  @include mq("md") {
     left: rem(-40);
     bottom: rem(14);
   }
@@ -27,7 +27,6 @@
 .swiper-pagination {
   transform: rotate(90deg);
 }
-
 
 /* 矢印
 --------------------------------------------------*/
@@ -47,7 +46,7 @@
   left: rem(-35);
   background-repeat: no-repeat;
   background-size: contain;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(66);
     height: rem(66);
     left: rem(-42);
@@ -62,7 +61,7 @@
   right: rem(-35);
   background-repeat: no-repeat;
   background-size: contain;
-  @include mq('md') {
+  @include mq("md") {
     width: rem(66);
     height: rem(66);
     right: rem(-44);
@@ -75,6 +74,6 @@
 
 /* 自動で流れ続ける記述
 --------------------------------------------------*/
-.swiper-wrapper.staff-slide__wrapper{
+.swiper-wrapper.staff-slide__wrapper {
   transition-timing-function: linear;
 }

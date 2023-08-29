@@ -21,19 +21,28 @@
   color: $black;
 }
 
+.news__en-title {
+  font-size: rem(11);
+  letter-spacing: 0.1em;
+  font-weight: $bold;
+  line-height: 1;
+  color: $main-color;
+  text-transform: uppercase;
+}
+
 .news__archive {
   font-size: rem(11);
   color: #888;
   border-bottom: 1px solid #888;
-  transition: opacity .3s;
-  @include mq('md') {
+  transition: opacity 0.3s;
+  @include mq("md") {
     font-size: rem(12);
   }
 }
 
-@media (hover:hover){
-  .news__archive:hover{
-    opacity: .7;
+@media (hover: hover) {
+  .news__archive:hover {
+    opacity: 0.7;
   }
 }
 
@@ -48,8 +57,8 @@
   border-bottom: 1px solid $black;
   border-top: 1px solid $black;
   padding: rem(11) rem(8);
-  @include mq('md') {
-    padding: rem(11) 0;
+  @include mq("md") {
+    padding: rem(9) 0;
   }
 }
 
@@ -57,7 +66,7 @@
   display: flex;
   align-items: center;
   gap: rem(23);
-  @include mq('md') {
+  @include mq("md") {
     margin-left: rem(14);
   }
 }
@@ -76,7 +85,6 @@
   font-size: rem(14);
   color: $black;
   transition: color 0.3s;
-  
 }
 
 .news__item:hover .news__text {
@@ -91,10 +99,12 @@
   background-size: cover;
   background-repeat: no-repeat;
   transition: all 0.3s;
+  @include mq("md") {
+    margin-right: rem(8);
+  }
 }
 
-
-@media (hover:hover){
+@media (hover: hover) {
   .news__item:hover .news__arrow {
     transform: translateX(50%);
     background-image: url("../images/common/icon_arrow-blue.svg");

@@ -6,11 +6,15 @@
 
 .greeting__content {
   margin-top: rem(38);
+  max-width: rem(600);
+  width: 100%;
+  margin: 0 auto;
   @include mq("md") {
     margin-top: rem(60);
     display: flex;
     gap: rem(80);
     width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -80,7 +84,7 @@
   border-radius: rem(20);
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   object-position: top;
 }
 
@@ -125,7 +129,7 @@
 
 .greeting__license {
   margin-top: rem(40);
-  @include mq('md') {
+  @include mq("md") {
     margin-top: rem(30);
   }
 }

@@ -2,7 +2,7 @@
 
 .btn-reservation {
   display: none;
-  @include mq('md') {
+  @include mq("md") {
     display: block;
     position: fixed;
     top: rem(176);
@@ -16,7 +16,7 @@
   }
 }
 
-@media (hover:hover){
+@media (hover: hover) {
   .btn-reservation:hover {
     background-color: $dark-blue;
   }

@@ -29,7 +29,10 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
-  scroll-margin-top: 80px;
+  scroll-padding-top: 60px; /* 固定ヘッダの高さ分 */
+  @media screen and (min-width: 1200px) {
+    scroll-padding-top: 80px; /* 固定ヘッダの高さ分 */
+  }
 }
 
 /* Set core body defaults */
@@ -37,6 +40,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeLegibility;
   line-height: 1.5;
+
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
