@@ -25,7 +25,7 @@
 
 .content-card__head {
   padding-bottom: rem(20);
-  border-bottom: 1px solid $black;
+  border-bottom: 1px solid #C2C2C2;
   @include mq("md") {
     display: flex;
     align-items: center;

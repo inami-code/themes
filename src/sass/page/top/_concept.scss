@@ -16,6 +16,7 @@
   transform: scale(1.5);
   z-index: -10;
   width: 100%;
+  max-width: 100%;
   height: rem(726);
   @include mq("md") {
     top: 8%;

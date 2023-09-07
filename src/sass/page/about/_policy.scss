@@ -34,6 +34,7 @@
 .policy__container {
   @include mq("md") {
     display: flex;
+    align-items: center;
     flex-direction: row-reverse;
     gap: rem(92);
   }

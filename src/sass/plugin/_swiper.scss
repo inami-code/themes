@@ -43,7 +43,7 @@
   background-image: url(../images/common/mv-arrow-left.png);
   width: rem(50);
   height: rem(50);
-  left: rem(-35);
+  left: rem(-30);
   background-repeat: no-repeat;
   background-size: contain;
   @include mq("md") {
@@ -58,7 +58,7 @@
   background-image: url(../images/common/mv-arrow-right.png);
   width: rem(50);
   height: rem(50);
-  right: rem(-35);
+  right: rem(-30);
   background-repeat: no-repeat;
   background-size: contain;
   @include mq("md") {

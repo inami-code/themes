@@ -15,12 +15,14 @@
   // swiper矢印
   position: relative;
   aspect-ratio: 335 / 447;
+  width: 100%;
+  max-width: 100%;
   @include mq("md") {
     aspect-ratio: 1160 / 520;
   }
 }
 
-.mv__image img {
+.mv__image picture {
   border-radius: rem(8);
   width: 100%;
   height: 100%;

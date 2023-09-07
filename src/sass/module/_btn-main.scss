@@ -80,7 +80,7 @@
   width: rem(25);
   height: rem(18);
   background-image: url(../images/common/btn-reservation.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   @include mq('md') {
     width: rem(25);
